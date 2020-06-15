@@ -25,7 +25,7 @@ test('shows appropriate message when the status is "Waiting"', () => {
     cheating: false
   };
   
-  const { container } = render(<Result status={fakeState.status} />);
+  const { container, getByTestId } = render(<Result status={fakeState.status} />);
   expect(getByTestId(container, 'result_footer')).toHaveTextContent('Waiting for your choice!');
 });
 
